@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.0.aar\\b3c315b56c49ac3275c10198fe9b0a84\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.0.aar\\b3c315b56c49ac3275c10198fe9b0a84\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    }
+]

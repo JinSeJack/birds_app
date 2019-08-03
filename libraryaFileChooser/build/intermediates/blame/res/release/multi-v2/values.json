@@ -1,0 +1,154 @@
+{
+    "logs": [
+        {
+            "outputFile": "F:\\birds_app\\libraryaFileChooser\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "F:\\birds_app\\libraryaFileChooser\\src\\main\\res\\values\\dimens.xml",
+                    "from": {
+                        "startLines": "18,17",
+                        "startColumns": "1,1",
+                        "startOffsets": "752,712",
+                        "endColumns": "45,39",
+                        "endOffsets": "796,750"
+                    },
+                    "to": {
+                        "startLines": "4,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "140,189",
+                        "endColumns": "48,42",
+                        "endOffsets": "184,227"
+                    }
+                },
+                {
+                    "source": "F:\\birds_app\\libraryaFileChooser\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "716",
+                        "endLines": "26",
+                        "endColumns": "12",
+                        "endOffsets": "1226"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "524",
+                        "endLines": "19",
+                        "endColumns": "12",
+                        "endOffsets": "1034"
+                    }
+                },
+                {
+                    "source": "F:\\birds_app\\libraryaFileChooser\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "19,17,20,21,18",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "785,658,832,888,707",
+                        "endColumns": "46,48,55,61,77",
+                        "endOffsets": "827,702,883,945,780"
+                    },
+                    "to": {
+                        "startLines": "6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "232,279,328,384,446",
+                        "endColumns": "46,48,55,61,77",
+                        "endOffsets": "274,323,379,441,519"
+                    }
+                },
+                {
+                    "source": "F:\\birds_app\\libraryaFileChooser\\src\\main\\res\\values\\bool.xml",
+                    "from": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "56,98",
+                        "endColumns": "41,42",
+                        "endOffsets": "93,136"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,97",
+                        "endColumns": "41,42",
+                        "endOffsets": "92,135"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "F:\\birds_app\\libraryaFileChooser\\build\\intermediates\\res\\merged\\release\\values\\values.xml",
+            "map": [
+                {
+                    "source": "F:\\birds_app\\libraryaFileChooser\\src\\main\\res\\values\\dimens.xml",
+                    "from": {
+                        "startLines": "18,17",
+                        "startColumns": "1,1",
+                        "startOffsets": "752,712",
+                        "endColumns": "45,39",
+                        "endOffsets": "796,750"
+                    },
+                    "to": {
+                        "startLines": "4,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "140,189",
+                        "endColumns": "48,42",
+                        "endOffsets": "184,227"
+                    }
+                },
+                {
+                    "source": "F:\\birds_app\\libraryaFileChooser\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "716",
+                        "endLines": "26",
+                        "endColumns": "12",
+                        "endOffsets": "1226"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "524",
+                        "endLines": "19",
+                        "endColumns": "12",
+                        "endOffsets": "1034"
+                    }
+                },
+                {
+                    "source": "F:\\birds_app\\libraryaFileChooser\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "19,17,20,21,18",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "785,658,832,888,707",
+                        "endColumns": "46,48,55,61,77",
+                        "endOffsets": "827,702,883,945,780"
+                    },
+                    "to": {
+                        "startLines": "6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "232,279,328,384,446",
+                        "endColumns": "46,48,55,61,77",
+                        "endOffsets": "274,323,379,441,519"
+                    }
+                },
+                {
+                    "source": "F:\\birds_app\\libraryaFileChooser\\src\\main\\res\\values\\bool.xml",
+                    "from": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "56,98",
+                        "endColumns": "41,42",
+                        "endOffsets": "93,136"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,97",
+                        "endColumns": "41,42",
+                        "endOffsets": "92,135"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "F:\\Test\\libraryviewpagerindicator\\build\\intermediates\\res\\merged\\debug\\color\\vpi__light_theme.xml",
+        "source": "F:\\Test\\libraryviewpagerindicator\\src\\main\\res\\color\\vpi__light_theme.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryviewpagerindicator\\build\\intermediates\\res\\merged\\debug\\color\\vpi__light_theme.xml",
+        "source": "F:\\birds_app\\libraryviewpagerindicator\\src\\main\\res\\color\\vpi__light_theme.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryviewpagerindicator\\build\\intermediates\\res\\merged\\debug\\color\\vpi__dark_theme.xml",
+        "source": "F:\\Test\\libraryviewpagerindicator\\src\\main\\res\\color\\vpi__dark_theme.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryviewpagerindicator\\build\\intermediates\\res\\merged\\debug\\color\\vpi__dark_theme.xml",
+        "source": "F:\\birds_app\\libraryviewpagerindicator\\src\\main\\res\\color\\vpi__dark_theme.xml"
+    }
+]

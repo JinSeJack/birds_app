@@ -1,0 +1,114 @@
+[
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_top.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.0.aar\\b3c315b56c49ac3275c10198fe9b0a84\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\snackbar_out.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.0\\res\\anim\\snackbar_out.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\fab_in.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.0\\res\\anim\\fab_in.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.0.aar\\b3c315b56c49ac3275c10198fe9b0a84\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_bottom.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.0.aar\\b3c315b56c49ac3275c10198fe9b0a84\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.0.aar\\b3c315b56c49ac3275c10198fe9b0a84\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\fab_in.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\design-22.2.0.aar\\1a216f4f4dd3d79982ccf14116daed44\\res\\anim\\fab_in.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\snackbar_in.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\design-22.2.0.aar\\1a216f4f4dd3d79982ccf14116daed44\\res\\anim\\snackbar_in.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\snackbar_out.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\design-22.2.0.aar\\1a216f4f4dd3d79982ccf14116daed44\\res\\anim\\snackbar_out.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.0.aar\\b3c315b56c49ac3275c10198fe9b0a84\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_out.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.0.aar\\b3c315b56c49ac3275c10198fe9b0a84\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.0.aar\\b3c315b56c49ac3275c10198fe9b0a84\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\snackbar_in.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.0\\res\\anim\\snackbar_in.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.0.aar\\b3c315b56c49ac3275c10198fe9b0a84\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_top.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_bottom.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\fab_out.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\design-22.2.0.aar\\1a216f4f4dd3d79982ccf14116daed44\\res\\anim\\fab_out.xml"
+    },
+    {
+        "merged": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\fab_out.xml",
+        "source": "F:\\Test\\libraryedittextvalidator\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.0\\res\\anim\\fab_out.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.0.aar\\b3c315b56c49ac3275c10198fe9b0a84\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "F:\\birds_app\\libraryedittextvalidator\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\wangj\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.0.aar\\b3c315b56c49ac3275c10198fe9b0a84\\res\\anim\\abc_slide_out_bottom.xml"
+    }
+]
