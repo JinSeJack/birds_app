@@ -254,7 +254,7 @@ public class MenuActivity extends CustomAnimation {
 
 
         puretextUrl = UrlUtils.getControllerUrl(MenuActivity.this, "api/event", "upload/puretext");
-        audioUrl = UrlUtils.getControllerUrl(MenuActivity.this, "api/ev15061113379ent", "upload/audio");
+        audioUrl = UrlUtils.getControllerUrl(MenuActivity.this, "api/event", "upload/audio");
         //audioUrl = "http://www.aunnyair.top:8080/MyBirds/api/event/upload/audio";
         /// 设置滑动菜单
         intSlidingMenu(savedInstanceState);
@@ -286,7 +286,6 @@ public class MenuActivity extends CustomAnimation {
         action.setAction(new DrawerAction());
         // new 一个AsyncHttpClient
         client = new AsyncHttpClient();
-
     }
 
     private void intSlidingMenu(Bundle savedInstanceState) {
