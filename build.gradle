@@ -19,7 +19,6 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        google()
     }
     gradle.projectsEvaluated {
         tasks.withType(JavaCompile) {
