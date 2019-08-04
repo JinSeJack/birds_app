@@ -1,10 +1,10 @@
 package com.dd.processbutton.iml;
 
-import com.dd.processbutton.ProcessButton;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
+
+import com.dd.processbutton.ProcessButton;
 
 /*
  *    The MIT License (MIT)

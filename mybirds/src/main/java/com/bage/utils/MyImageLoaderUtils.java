@@ -1,18 +1,10 @@
 package com.bage.utils;
 
-import android.content.Context;
 import android.graphics.Bitmap;
-import android.os.Bundle;
-import android.widget.ImageView;
 
 import com.bage.mybirds.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 
 /**
  * Created by bage on 2016/6/6.

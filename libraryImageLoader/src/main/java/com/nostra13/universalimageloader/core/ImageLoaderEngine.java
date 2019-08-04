@@ -16,6 +16,7 @@
 package com.nostra13.universalimageloader.core;
 
 import android.view.View;
+
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.FlushedInputStream;
 import com.nostra13.universalimageloader.core.imageaware.ImageAware;

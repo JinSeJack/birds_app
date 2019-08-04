@@ -3,8 +3,6 @@ package com.bage.fragment;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -17,13 +15,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.bage.activity.ImageCropActivity;
+import com.bage.activity.MenuActivity;
 import com.bage.common.Commons;
 import com.bage.domain.Menu;
-import com.bage.activity.MenuActivity;
 import com.bage.mybirds.R;
 import com.bage.utils.FileUtils;
 import com.bage.utils.LogUtils;
-import com.ipaulpro.afilechooser.utils.AFileChooserFileUtils;
 import com.meg7.widget.CustomShapeImageView;
 
 import java.util.ArrayList;

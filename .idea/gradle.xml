@@ -5,7 +5,7 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="D:\AndroidStudio\AndroidStudio\gradle\gradle-2.10" />
+        <option name="gradleHome" value="D:/AndroidStudio/AndroidStudio/gradle/gradle-2.10" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -21,7 +21,6 @@
             <option value="$PROJECT_DIR$/librarysildemenu" />
             <option value="$PROJECT_DIR$/libraryviewpagerindicator" />
             <option value="$PROJECT_DIR$/mybirds" />
-            <option value="$PROJECT_DIR$/sample" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

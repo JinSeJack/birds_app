@@ -1,8 +1,6 @@
 package com.bage.anim;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatCallback;
 
 import com.bage.activity.BaseActivity;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu.CanvasTransformer;

@@ -1,11 +1,11 @@
 package com.nostra13.universalimageloader.core.download;
 
+import com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
-
-import com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme;
 
 @RunWith(RobolectricTestRunner.class)
 public class BaseImageDownloaderTest {

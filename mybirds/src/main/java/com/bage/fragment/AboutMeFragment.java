@@ -1,20 +1,12 @@
 package com.bage.fragment;
 
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bage.common.Commons;
@@ -22,12 +14,6 @@ import com.bage.domain.User;
 import com.bage.mybirds.R;
 import com.bage.utils.LogUtils;
 import com.meg7.widget.CustomShapeImageView;
-
-import org.apache.http.Header;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Calendar;
 
 public class AboutMeFragment extends Fragment {
 

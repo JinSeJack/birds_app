@@ -1,8 +1,8 @@
 package com.bage.utils;
 
-import com.dd.processbutton.ProcessButton;
-
 import android.os.Handler;
+
+import com.dd.processbutton.ProcessButton;
 
 import java.util.Random;
 

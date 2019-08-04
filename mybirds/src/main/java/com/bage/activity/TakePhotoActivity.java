@@ -27,7 +27,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bage.common.Commons;
-import com.bage.domain.Comment;
 import com.bage.domain.Event;
 import com.bage.mybirds.R;
 import com.bage.utils.JsonUtils;

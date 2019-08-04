@@ -89,6 +89,34 @@
 
         </RelativeLayout>
 
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_view_height"
+            android:layout_marginLeft="@dimen/base_view_marginleft_inparent"
+            android:layout_marginRight="@dimen/base_view_marginright_inparent"
+            android:layout_marginTop="@dimen/base_view_margintop"
+            android:background="@color/baseItemBackgourndColor">
+
+
+            <TextView
+                android:id="@+id/frmenu_csiv_mypic_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/base_view_marginleft"
+                android:text="类型：" />
+            <!--最简单的加载下拉数组：entries，内容定义在string-array中-->
+            <Spinner
+                android:id="@+id/acmenu_fet_content_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base_view_marginleft"
+                android:layout_toRightOf="@+id/frmenu_csiv_mypic_type"
+                android:entries="@array/type_values" />
+
+        </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/base_view_height"

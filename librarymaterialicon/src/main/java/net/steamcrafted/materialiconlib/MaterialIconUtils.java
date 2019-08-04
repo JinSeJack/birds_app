@@ -3,8 +3,6 @@ package net.steamcrafted.materialiconlib;
 import android.content.Context;
 import android.graphics.Typeface;
 
-import java.io.File;
-
 import static android.util.TypedValue.COMPLEX_UNIT_DIP;
 import static android.util.TypedValue.applyDimension;
 
