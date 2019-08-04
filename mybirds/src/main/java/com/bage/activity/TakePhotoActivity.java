@@ -23,6 +23,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -83,6 +84,7 @@ public class TakePhotoActivity extends AppCompatActivity {
     private TextView tv_locatin;
     private TextView tv_time;
     private EditText et_count;
+    private Spinner et_countbirds_type;
     private EditText et_remark;
     private EditText et_question;
 
@@ -107,6 +109,7 @@ public class TakePhotoActivity extends AppCompatActivity {
         tv_locatin = (TextView)findViewById(R.id.take_photo_textview_location);
         tv_time = (TextView)findViewById(R.id.take_photo_textview_time);
         et_count = (EditText)findViewById(R.id.take_photo_edittext_countbirds);
+        et_countbirds_type = (Spinner)findViewById(R.id.take_photo_edittext_countbirds_type);
         et_question = (EditText)findViewById(R.id.take_photo_edittext_question);
         et_remark = (EditText)findViewById(R.id.take_photo_edittext_remark);
         mLocationClient = new LocationClient(getApplicationContext());     //声明LocationClient类
@@ -558,7 +561,15 @@ public class TakePhotoActivity extends AppCompatActivity {
             }else{
                 amount = Integer.parseInt(et_count.getText().toString());
             }
+
+            String dataTypeDesc = et_countbirds_type.getSelectedItem().toString();
             Event event = new Event(Commons.currentUser.getUse_id(), amount, 0, et_question.getText().toString(), TimeHelper.getCurrentTime(), (float) longitude, (float) latitude, 1, "", "", "", et_remark.getText().toString(), "暂无备注");
+            if(Event.dataType_desc_bird.equals(dataTypeDesc)){ // 鸟
+                event.setEve_datatype(Event.dataType_bird_pic);
+            } else {
+                event.setEve_datatype(Event.dataType_cicada_pic); // 禅
+            }
+
             params.put("event", JsonUtils.BeantoJsonStr(event));
             //params.setHttpEntityIsRepeatable(true);
         } catch (Exception e) {

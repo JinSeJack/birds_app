@@ -1,6 +1,8 @@
 package com.bage.domain;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by bage on 2016/3/13.
@@ -10,6 +12,17 @@ public class Event implements Serializable {
 	public static final int DATATYPE_PURETEXT = 0;
 	public static final int DATATYPE_PICTURE = 1;
 	public static final int DATATYPE_AUDIO = 2;
+
+	public static final String dataType_desc_bird = "鸟";
+	public static final String dataType_desc_cicada = "蝉";
+
+	public static final int dataType_bird_text = 0; // 鸟，文本
+	public static final int dataType_bird_pic = 1; // 鸟，图片
+	public static final int dataType_bird_voice = 2; // 鸟，语音
+
+	public static final int dataType_cicada_text = 100;
+	public static final int dataType_cicada_pic = 101;
+	public static final int dataType_cicada_voice = 102;
 
 	private int eve_id; // 事件id
 	private int use_id; // 用户id

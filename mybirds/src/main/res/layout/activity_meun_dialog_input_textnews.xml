@@ -100,7 +100,7 @@
 
 
             <TextView
-                android:id="@+id/frmenu_csiv_mypic_type"
+                android:id="@+id/frmenu_csiv_mypic_type_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -112,7 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/base_view_marginleft"
-                android:layout_toRightOf="@+id/frmenu_csiv_mypic_type"
+                android:layout_toRightOf="@+id/frmenu_csiv_mypic_type_text"
                 android:entries="@array/type_values" />
 
         </RelativeLayout>

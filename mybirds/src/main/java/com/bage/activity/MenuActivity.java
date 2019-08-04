@@ -22,6 +22,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -252,7 +253,7 @@ public class MenuActivity extends CustomAnimation {
 
 
         puretextUrl = UrlUtils.getControllerUrl(MenuActivity.this, "api/event", "upload/puretext");
-        audioUrl = UrlUtils.getControllerUrl(MenuActivity.this, "api/event", "upload/audio");
+        audioUrl = UrlUtils.getControllerUrl(MenuActivity.this, "api/ev15061113379ent", "upload/audio");
         //audioUrl = "http://www.aunnyair.top:8080/MyBirds/api/event/upload/audio";
         /// 设置滑动菜单
         intSlidingMenu(savedInstanceState);
@@ -391,6 +392,7 @@ public class MenuActivity extends CustomAnimation {
         View viewDialog = getLayoutInflater().inflate(R.layout.activity_meun_dialog_input_textnews, null);
         final EditText fet_question = (EditText) viewDialog.findViewById(R.id.acmenu_fet_question);
         final EditText fet_description = (EditText) viewDialog.findViewById(R.id.acmenu_fet_description);
+        final Spinner spi_type = (Spinner) viewDialog.findViewById(R.id.acmenu_fet_content_type);
         final EditText fet_content = (EditText) viewDialog.findViewById(R.id.acmenu_fet_content);
         final EditText et_remark = (EditText) viewDialog.findViewById(R.id.acmenu_et_remark);
         final Button btn_cancel = (Button) viewDialog.findViewById(R.id.acmenu_btn_cancel);
@@ -408,7 +410,15 @@ public class MenuActivity extends CustomAnimation {
                 String description = fet_description.getText().toString();
                 String content = fet_content.getText().toString();
                 String remark = et_remark.getText().toString();
+                String dataTypeDesc = spi_type.getSelectedItem().toString();
+
                 Event event = new Event(0, Commons.currentUser.getUse_id(), question, TimeHelper.getCurrentTime(), (float) longitude, (float) latitude, 0, content, "", "", description, remark);
+
+                if(Event.dataType_desc_bird.equals(dataTypeDesc)){ // 鸟
+                    event.setEve_datatype(Event.dataType_bird_text);
+                } else {
+                    event.setEve_datatype(Event.dataType_cicada_text); // 禅
+                }
                 // 上传
                 uploadPureTextNews(event);
                 dialog.dismiss();
@@ -492,6 +502,7 @@ public class MenuActivity extends CustomAnimation {
     private EditText et_dec;
     private EditText et_count;
     private EditText et_que;
+    private Spinner spi_audioBird_type;
 
     public void addAudioNews() {
 
@@ -587,6 +598,7 @@ public class MenuActivity extends CustomAnimation {
         et_dec = (EditText) view1.findViewById(R.id.et_audioDescription);
         et_count = (EditText) view1.findViewById(R.id.et_audioBirdAmount);
         et_que = (EditText) view1.findViewById(R.id.et_audioQuestion);
+        spi_audioBird_type = (Spinner) view1.findViewById(R.id.et_audioBird_type);
         new AlertDialog.Builder(this).setView(view1)
                 .setPositiveButton("上传", new DialogInterface.OnClickListener() {
                     @Override
@@ -668,9 +680,17 @@ public class MenuActivity extends CustomAnimation {
             if(eve[0] == "" || eve[0] == null){
                 eve[0] = "0";
             }
+            String dataTypeDesc = spi_audioBird_type.getSelectedItem().toString();
             //System.out.println(eve[0] + " --- " + eve[1] + " --- " +eve[2] + " --- " );
             Event event = new Event(Commons.currentUser.getUse_id(), Integer.parseInt(eve[0]), 0, eve[2], TimeHelper.getCurrentTime(),
                     (float) longitude, (float) latitude, 2, "", myRecAudioDir, "", "", "备注");
+
+            if(Event.dataType_desc_bird.equals(dataTypeDesc)){ // 鸟
+                event.setEve_datatype(Event.dataType_bird_voice);
+            } else {
+                event.setEve_datatype(Event.dataType_cicada_voice); // 禅
+            }
+
             String eventString = JsonUtils.BeantoJsonStr(event);
             params.put("event", eventString);
 
