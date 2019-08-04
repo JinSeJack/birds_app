@@ -33,7 +33,7 @@ public class WhatIDoFragment extends DialogFragment {
     }
 
     public interface SpeciesChooseListener {
-        void onSpeciesChoosed(String mode);
+        void onSpeciesChoosed(String species);
     }
 
 }
