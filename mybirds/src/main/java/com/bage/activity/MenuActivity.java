@@ -64,7 +64,7 @@ import at.markushi.ui.action.DrawerAction;
 
 public class MenuActivity extends CustomAnimation {
 
-    public static String currentSpecies = "";
+    public static String currentSpecies = "鸟";
 
     private String puretextUrl;
     private String audioUrl;

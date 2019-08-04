@@ -86,15 +86,19 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
         menu3.content = "我的设置";
         Menu menu4 = new Menu();
         menu4.imgId = R.drawable.sea;
-        menu4.content = "物种选择";
+        menu4.content = "鸟";
         Menu menu5 = new Menu();
         menu5.imgId = R.drawable.fabu;
-        menu5.content = "退出";
+        menu5.content = "蝉";
+        Menu menu6 = new Menu();
+        menu6.imgId = R.drawable.fabu;
+        menu6.content = "退出";
         menus.add(menu1);
         menus.add(menu2);
         menus.add(menu3);
         menus.add(menu4);
         menus.add(menu5);
+        menus.add(menu6);
     }
 
 
@@ -150,14 +154,26 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
                 newContent = new SettingFragment();
                 break;
             case 3:
-                 currentTitle = "物种选择";
-                 choose();
+                 currentTitle = "蝉";
+                 choose("蝉");
                  break;
+            case 4:
+                currentTitle = "鸟";
+                choose("鸟");
+                break;
             default:myExit();
                 break;
         }
         if (newContent != null)
             switchFragment(newContent);
+    }
+
+    private void choose(String type) {
+        LogUtils.shownToast(getContext(), "当前物种："+type);
+        MenuActivity.currentSpecies = type;
+        int icon = type.equals("鸟") ? R.drawable.birdtitle : R.drawable.cicada;
+        String content = type.equals("鸟") ? getString(R.string.dialog_bird_content) : getString(R.string.dialog_cicada_content);
+        showNormalDialog(type, content, icon);
     }
 
     private void choose() {
@@ -192,8 +208,7 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
                 , new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
-                        dialog.dismiss();
+//                        dialog.dismiss();
                     }
                 });
         //创建并显示
