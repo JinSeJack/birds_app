@@ -10,8 +10,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bage.domain.Event;
 import com.bage.activity.NewsDetailActivity;
+import com.bage.domain.Event;
 import com.bage.mybirds.R;
 import com.bage.utils.JsonUtils;
 import com.bage.utils.LogUtils;
@@ -27,7 +27,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import org.apache.http.Header;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class NewsPictureFragment extends NewsFragment implements AdapterView.OnItemClickListener {

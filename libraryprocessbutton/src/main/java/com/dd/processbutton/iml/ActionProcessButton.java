@@ -1,8 +1,5 @@
 package com.dd.processbutton.iml;
 
-import com.dd.processbutton.ProcessButton;
-import com.dd.processbutton.R;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Canvas;
@@ -15,6 +12,9 @@ import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
+
+import com.dd.processbutton.ProcessButton;
+import com.dd.processbutton.R;
 
 /*
  *    The MIT License (MIT)

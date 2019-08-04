@@ -1,6 +1,5 @@
 package com.bage.validator;
 
-import android.text.TextUtils;
 import android.widget.EditText;
 
 import com.andreabaccega.formedittextvalidator.Validator;

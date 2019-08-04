@@ -12,7 +12,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -21,14 +20,7 @@ import com.bage.common.Commons;
 import com.bage.domain.User;
 import com.bage.mybirds.R;
 import com.bage.utils.LogUtils;
-import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.meg7.widget.CustomShapeImageView;
-import com.nostra13.universalimageloader.core.ImageLoader;
-
-import at.markushi.ui.ActionView;
-import at.markushi.ui.action.Action;
-import at.markushi.ui.action.BackAction;
-import at.markushi.ui.action.DrawerAction;
 
 public class SettingFragment extends Fragment {
 

@@ -1,13 +1,10 @@
 package com.bage.utils;
 
 import android.content.Context;
-import com.baidu.location.BDLocation;
+
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
-import com.baidu.location.Poi;
-
-import java.util.List;
 
 /**
  * Created by bage on 2016/3/28.

@@ -9,4 +9,8 @@
         <item>birds1</item>
     </string-array>
 
+    <string-array name="type_values">
+        <item>鸟</item>
+        <item>禅</item>
+    </string-array>
 </resources>

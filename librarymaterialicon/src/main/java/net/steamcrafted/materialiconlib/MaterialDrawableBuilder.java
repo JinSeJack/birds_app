@@ -3,14 +3,11 @@ package net.steamcrafted.materialiconlib;
 /**
  * Created by Wannes2 on 19/07/2015.
  */
+
 import android.content.Context;
 import android.graphics.*;
 import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
-import android.util.Log;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Builder used to create a MaterialDrawable. Provide a context and at least an icon to build.

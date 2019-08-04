@@ -14,7 +14,7 @@ public class AddNewsSelectDialogFragment extends DialogFragment {
 
     public static final String picture = "图片";
     public static final String audio = "音频";
-    public static final String puretext = "纯文本";
+    public static final String puretext = "文本";
 
     private String[] dataTypes = {picture,audio,puretext};
 

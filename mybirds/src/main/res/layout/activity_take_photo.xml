@@ -47,6 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="15px"
         android:background="#dbdbdb"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,7 +64,7 @@
 
         <EditText
             android:layout_height="wrap_content"
-            android:layout_width="30dp"
+            android:layout_width="15px"
             android:inputType="number"
             android:text="1"
             android:textSize="18sp"
@@ -78,6 +79,29 @@
             android:textColor="#666666"
             android:textSize="20sp" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15px"
+        android:background="#F2F2F2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="   类型： "
+            android:textColor="#666666"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/take_photo_edittext_countbirds_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/type_values" />
+    </LinearLayout>
+
+
 
     <TextView
         android:layout_width="match_parent"

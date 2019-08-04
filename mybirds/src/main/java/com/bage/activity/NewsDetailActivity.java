@@ -21,7 +21,6 @@ import com.bage.utils.MyImageLoaderUtils;
 import com.bage.utils.UrlUtils;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 

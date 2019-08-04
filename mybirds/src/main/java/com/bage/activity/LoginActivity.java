@@ -17,7 +17,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bage.common.Commons;
 import com.bage.domain.User;
@@ -26,14 +25,11 @@ import com.bage.utils.JsonUtils;
 import com.bage.utils.LogUtils;
 import com.bage.utils.ProgressGenerator;
 import com.bage.utils.UrlUtils;
-import com.dd.processbutton.iml.ActionProcessButton;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 import org.apache.http.Header;
-
-import java.security.interfaces.RSAPublicKey;
 
 /**
  * A login screen that offers login via email/password.
