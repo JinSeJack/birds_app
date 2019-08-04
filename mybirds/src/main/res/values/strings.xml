@@ -21,5 +21,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="dialog_bird_content">飞禽的总称，是适应于陆地和空中生活的高等脊椎动物。长羽毛，能维持身体的恒温;胸部有突起的龙骨突，全身骨骼多空隙，内充气体，故身体轻便;前肢成翼，后肢行走，多数能飞行，活动范围广泛，也有的翼退化，而不能飞行，活动区域相对较小，如鸵鸟、企鹅及多数家禽等。角质喙，没有牙齿，有些鸟种具有迁徙行为。</string>
+    <string name="dialog_cicada_content">蝉有两对膜翅，形状基本相同，头部宽而短，具有明显突出的额唇 蝉  特写 蝉 特写(42张)  基；视力相当良好，复眼不大，位于头部两侧且分得很开，有3个单眼。触角短，呈须状。口器细长，口器内有食管与唾液管，属于刺吸式。</string>
 
 </resources>
