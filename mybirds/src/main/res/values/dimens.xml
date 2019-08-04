@@ -1,0 +1,110 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_login_horizontal_margin">30dp</dimen>
+    <dimen name="activity_login_vertical_margin">6dp</dimen>
+
+    <dimen name="slidingmenu_offset">150dp</dimen>
+    <!--右边剩余距离宽度-->
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">0dp</dimen>
+    <!--阴影宽度-->
+
+    <dimen name="drawable_ring_size">4dip</dimen>
+
+
+    <!--引导页面-->
+    <dimen name="baseline">16dp</dimen>
+    <!--引导页面-->
+
+    <!--可回收listView-->
+    <dimen name="small">8dp</dimen>
+    <!--可回收listView-->
+
+    <!--libraryfloatingsearchview-->
+    <dimen name="search_view_inset">5dp</dimen>
+    <!--libraryfloatingsearchview-->
+
+    <!--全局配置-->
+
+    <!--菜单栏、底边栏-->
+    <dimen name="base_menubar_height">48dp</dimen>
+    <dimen name="base_menubar_heightadd">60dp</dimen>
+    <dimen name="base_menubar_height_hart">24dp</dimen>
+    <dimen name="base_menubar_margintop">0dp</dimen>
+    <dimen name="base_menubar_heightbelow">54dp</dimen>
+    <dimen name="base_menubar_marginbottom">2dp</dimen>
+    <dimen name="base_menubar_titlespan">80dp</dimen>
+    <dimen name="base_menubar_titletextsize">20dp</dimen>
+    <dimen name="base_menubar_smallicon_width">16dp</dimen>
+    <dimen name="base_menubar_smallicon_height">16dp</dimen>
+    <!--菜单栏、底边栏-->
+
+    <!--view组件-->
+    <dimen name="base_view_margintop">2dp</dimen>
+    <dimen name="base_view_marginbottom">8dp</dimen>
+    <dimen name="base_dialog_marginbottom">16dp</dimen>
+    <dimen name="base_text_marginleft_inparent">3dp</dimen>
+    <dimen name="base_text_marginright_inparent">3dp</dimen>
+    <dimen name="base_view_marginleft_inparent">0dp</dimen>
+    <dimen name="base_view_marginright_inparent">0dp</dimen>
+    <dimen name="base_view_marginleft">16dp</dimen>
+    <dimen name="base_view_marginright">16dp</dimen>
+    <dimen name="base_view_paddingleft">16dp</dimen>
+    <dimen name="base_view_paddingright">16dp</dimen>
+    <dimen name="base_view_height">40dp</dimen>
+    <dimen name="base_marginbottom">16dp</dimen>
+
+    <dimen name="base_text_margintop_car_detail">4dp</dimen>
+    <dimen name="base_text_margintop_car_item">4dp</dimen>
+    <dimen name="base_text_marginbottom_car_item">4dp</dimen>
+    <!--view组件-->
+
+    <!--字体部分-->
+    <dimen name="base_content_titletextsize">14sp</dimen>
+    <dimen name="base_content_smalltextsize">12sp</dimen>
+    <dimen name="base_content_smallsmalltextsize">10sp</dimen>
+    <dimen name="base_content_contenttextsize">12sp</dimen>
+    <!--字体部分-->
+
+    <dimen name="base_content_paddingtop">8dp</dimen>
+    <dimen name="base_content_paddingbottom">8dp</dimen>
+
+
+    <!--图标长宽-->
+    <dimen name="base_smallsmallicon_width">16dp</dimen>
+    <dimen name="base_smallsmallicon_height">16dp</dimen>
+    <dimen name="base_smallicon_width">24dp</dimen>
+    <dimen name="base_smallicon_height">24dp</dimen>
+    <dimen name="base_smallicon_marginleft">20dp</dimen>
+    <dimen name="base_bigicon_width">80dp</dimen>
+    <dimen name="base_bigicon_height">80dp</dimen>
+    <dimen name="base_caricon_height">260dp</dimen>
+    <!--图标长宽-->
+
+    <dimen name="base_firstline_blank">12dp</dimen><!--首行缩进-->
+
+    <dimen name="base_dialog_width">240dp</dimen><!--对话框宽度-->
+    <dimen name="base_dialog_height">220dp</dimen><!--对话框高度-->
+    <dimen name="base_dialog_margintop">5dp</dimen><!--对话框高度-->
+
+    <dimen name="base_dialog_contentmargintop">1dp</dimen><!--对话框高度-->
+    <dimen name="base_dialog_contentmarginbottom">1dp</dimen><!--对话框高度-->
+    <dimen name="base_dialog_contentpaddingtop">16dp</dimen><!--对话框高度-->
+    <dimen name="base_dialog_contentpaddingbottom">16dp</dimen><!--对话框高度-->
+    <dimen name="base_dialog_contentpaddingright">16dp</dimen><!--对话框高度-->
+    <dimen name="base_dialog_contentpaddingleft">16dp</dimen><!--对话框高度-->
+    <dimen name="base_dialog_view_margintop">1dp</dimen><!--对话框高度-->
+
+    <dimen name="text_margin">16dp</dimen><!--对话框高度-->
+
+    <dimen name="base_input_cardview_cardElevation">1dp</dimen><!--对话框宽度-->
+
+    <dimen name="base_timeline_width">40dp</dimen>
+    <dimen name="base_timeline_height">60dp</dimen>
+
+    <!--全局配置-->
+</resources>

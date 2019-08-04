@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BottomNavigationViewLibrary/BottomNavigationViewLibrary.iml" filepath="$PROJECT_DIR$/BottomNavigationViewLibrary/BottomNavigationViewLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/birds_app.iml" filepath="$PROJECT_DIR$/birds_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraryImageLoader/libraryImageLoader.iml" filepath="$PROJECT_DIR$/libraryImageLoader/libraryImageLoader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraryaFileChooser/libraryaFileChooser.iml" filepath="$PROJECT_DIR$/libraryaFileChooser/libraryaFileChooser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/librarycustommage/librarycustommage.iml" filepath="$PROJECT_DIR$/librarycustommage/librarycustommage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraryedittextvalidator/libraryedittextvalidator.iml" filepath="$PROJECT_DIR$/libraryedittextvalidator/libraryedittextvalidator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/librarymarkushiui/librarymarkushiui.iml" filepath="$PROJECT_DIR$/librarymarkushiui/librarymarkushiui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/librarymaterialicon/librarymaterialicon.iml" filepath="$PROJECT_DIR$/librarymaterialicon/librarymaterialicon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraryphotocrop/libraryphotocrop.iml" filepath="$PROJECT_DIR$/libraryphotocrop/libraryphotocrop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraryprocessbutton/libraryprocessbutton.iml" filepath="$PROJECT_DIR$/libraryprocessbutton/libraryprocessbutton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/librarysildemenu/librarysildemenu.iml" filepath="$PROJECT_DIR$/librarysildemenu/librarysildemenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraryviewpagerindicator/libraryviewpagerindicator.iml" filepath="$PROJECT_DIR$/libraryviewpagerindicator/libraryviewpagerindicator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybirds/mybirds.iml" filepath="$PROJECT_DIR$/mybirds/mybirds.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
+    </modules>
+  </component>
+</project>

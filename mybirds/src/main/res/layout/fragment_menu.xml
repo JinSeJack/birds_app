@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baseColor">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="30dp">
+
+        <LinearLayout
+            android:id="@+id/leftmenu_ll_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_view_marginleft_inparent"
+            android:layout_marginRight="@dimen/base_view_marginright_inparent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.meg7.widget.CustomShapeImageView
+                    android:id="@+id/leftmenu_csiv_mypic"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="@dimen/base_view_marginright"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/myimg"
+                    app:shape="circle" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/leftmenu_csiv_mypic">
+
+                    <TextView
+                        android:id="@+id/leftmenu_tv_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/base_marginbottom"
+                        android:layout_marginTop="@dimen/base_view_margintop"
+                        android:text=""
+                        android:textColor="@color/baseTextColor"
+                        android:textSize="@dimen/base_content_titletextsize" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/leftmenu_tv_username"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/base_marginbottom">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/base_view_margintop">
+
+                            <ImageView
+                                android:id="@+id/leftmenu_iv_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:scaleType="center" />
+
+                            <TextView
+                                android:id="@+id/leftmenu_tv_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_toRightOf="@+id/leftmenu_iv_location"
+                                android:text=""
+                                android:textColor="@color/baseTextColor"
+                                android:textSize="@dimen/base_content_smallsmalltextsize" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/fr_lv_menus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/leftmenu_ll_header"
+            android:layout_marginTop="50dp"
+            android:divider="@null">
+
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

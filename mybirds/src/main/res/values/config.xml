@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--服务器配置-->
+    <string name="IPAddress">120.27.105.82</string>
+    <!--<string name="IPAddress">172.29.198.123</string>-->
+    <string name="port">8080</string>
+    <string name="serverName">MyBirds</string>
+    <!--服务器配置-->
+
+    <!--手机端配置-->
+    <string name="moduleName">MyBirds</string>
+    <string name="cacheFolder">cache</string>
+    <string name="audioFolder">audio</string>
+    <string name="photoFolder">photo</string>
+    <!--服务器配置-->
+</resources>

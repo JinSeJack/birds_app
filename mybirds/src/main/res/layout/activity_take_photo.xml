@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:background="#E0E0E0">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:background="@drawable/vulture" />
+    <ProgressBar
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/take_photo_progress_bar"/>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:lineSpacingExtra="10sp"
+        android:text="   地点："
+        android:textSize="18sp"
+        android:id="@+id/take_photo_textview_location"
+        android:layout_marginTop="5dp"
+        android:textColor="#666666"
+        android:background="#F2F2F2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        android:background="#dbdbdb"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="   时间："
+        android:textColor="#666666"
+        android:textSize="18sp"
+        android:background="#F2F2F2"
+        android:id="@+id/take_photo_textview_time"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        android:background="#dbdbdb"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F2F2F2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="   请如入估计鸟数： "
+            android:textColor="#666666"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:inputType="number"
+            android:text="1"
+            android:textSize="18sp"
+            android:background="#c0c0c0"
+            android:textColor="#666666"
+            android:id="@+id/take_photo_edittext_countbirds"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="只"
+            android:textColor="#666666"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        android:background="#dbdbdb"/>
+
+    <EditText
+        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:hint="请输入问题（主题）"
+        android:textSize="18sp"
+        android:background="#c0c0c0"
+        android:id="@+id/take_photo_edittext_question"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        android:background="#dbdbdb"/>
+    <EditText
+        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:hint="请输入备注"
+        android:background="#c0c0c0"
+        android:id="@+id/take_photo_edittext_remark"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/local_select_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/local" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="本地"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/take_photo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/take_photo1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="拍照"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/upload_photo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/upload" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="上传"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_container"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

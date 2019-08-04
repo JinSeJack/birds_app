@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/baseItemBackgourndColor"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/frlvit_iv_image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:paddingBottom="@dimen/base_dialog_contentpaddingbottom"
+            android:paddingTop="@dimen/base_dialog_contentpaddingbottom"
+            android:src="@drawable/user_loading" />
+
+        <RelativeLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:paddingBottom="@dimen/base_dialog_contentpaddingbottom"
+            android:paddingTop="@dimen/base_dialog_contentpaddingbottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/frlvit_tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="奔驰"
+                        android:textSize="@dimen/base_content_titletextsize" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_text_margintop_car_detail">
+
+                    <ImageView
+                        android:id="@+id/leftmenu_iv_location"
+                        android:layout_width="@dimen/base_smallsmallicon_width"
+                        android:layout_height="@dimen/base_smallsmallicon_height"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="center" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/vilation_tv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_toRightOf="@+id/leftmenu_iv_location"
+                        android:text="常州新北区"
+                        android:textSize="@dimen/base_content_smallsmalltextsize" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/frlvit_tv_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_view_margintop"
+                    android:maxLines="2"
+                    android:text="机动车未按规定faf方法临时停gsgsgsaffagsgsgsgsgsgsgsgsg车"
+                    android:textSize="@dimen/base_content_contenttextsize" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_view_margintop">
+
+                    <TextView
+                        android:id="@+id/frlvit_tv_likenumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="已处理"
+                        android:textColor="@android:color/holo_green_light"
+                        android:textSize="@dimen/base_content_smalltextsize" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_view_marginbottom">
+
+                    <ImageView
+                        android:id="@+id/itemleftmenu_iv_menuimage"
+                        android:layout_width="@dimen/base_smallsmallicon_width"
+                        android:layout_height="@dimen/base_smallsmallicon_height"
+                        android:layout_marginRight="@dimen/base_view_marginright"
+                        android:layout_toLeftOf="@+id/frlvit_tv_time"
+                        android:scaleType="center" />
+
+                    <TextView
+                        android:id="@+id/frlvit_tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/base_text_marginright_inparent"
+                        android:text="2016-04-08 10: 08"
+                        android:textSize="@dimen/base_content_smalltextsize" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
