@@ -161,7 +161,7 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
     }
 
     private void choose() {
-        //借用一下whatIdoFragment
+        //借用一下whatIdoFragment,用于显示
         WhatIDoFragment whatIDoFragment = new WhatIDoFragment();
         whatIDoFragment.setSpeciesChooseListener(new WhatIDoFragment.SpeciesChooseListener(){
             @Override
