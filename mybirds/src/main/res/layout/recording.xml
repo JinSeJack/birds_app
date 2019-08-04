@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_menubar_height"
+        android:background="@color/baseColor"
+        android:gravity="center"
+        android:text="点击图标录音"
+        android:textSize="@dimen/base_menubar_titletextsize" />
+
+    <FrameLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/recordingDilog"
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/iv_drawable"
+            android:layout_width="120dip"
+            android:layout_height="120dip"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:id="@+id/iv_startRecord"
+            android:layout_width="60dp"
+            android:layout_height="60dip"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/play" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="观察：" />
+
+        <EditText
+            android:id="@+id/et_audioBirdAmount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="鸟的数量"
+            android:maxLength="2"
+            android:numeric="integer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提问：" />
+
+        <EditText
+            android:id="@+id/et_audioQuestion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="60" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="描述：" />
+
+        <EditText
+            android:id="@+id/et_audioDescription"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="60" />
+    </LinearLayout>
+</LinearLayout>

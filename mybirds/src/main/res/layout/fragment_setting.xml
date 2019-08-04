@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baseAllBackgourndColor"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/setting_rl_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/base_view_marginleft_inparent"
+        android:layout_marginRight="@dimen/base_view_marginright_inparent"
+        android:layout_marginTop="@dimen/base_view_margintop"
+        android:background="@color/baseItemBackgourndColor">
+
+        <com.meg7.widget.CustomShapeImageView
+            android:id="@+id/setting_civ_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/base_view_marginbottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/base_view_margintop"
+            android:scaleType="centerCrop"
+            android:src="@drawable/myimg"
+            app:shape="circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/setting_civ_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/setting_tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="未登录"
+                android:textSize="@dimen/base_content_titletextsize" />
+
+            <TextView
+                android:id="@+id/setting_tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text=""
+                android:textSize="@dimen/base_content_contenttextsize" />
+        </LinearLayout>
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:id="@+id/iv_mypic2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/baseIconColor"
+            app:materialIconSize="@dimen/base_smallicon_width" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_rl_account_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/base_view_marginleft_inparent"
+        android:layout_marginRight="@dimen/base_view_marginright_inparent"
+        android:layout_marginTop="@dimen/base_view_margintop"
+        android:background="@color/baseItemBackgourndColor">
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:id="@+id/frmenu_csiv_mypic"
+            android:layout_width="@dimen/base_smallicon_width"
+            android:layout_height="@dimen/base_smallicon_width"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/base_smallicon_marginleft"
+            app:materialIcon="account"
+            app:materialIconColor="@color/baseIconColor"
+            app:materialIconSize="@dimen/base_smallicon_width" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/frmenu_csiv_mypic"
+            android:text="账号设置"
+            android:textSize="@dimen/base_content_contenttextsize" />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:id="@+id/iv_mypic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/baseIconColor"
+            app:materialIconSize="@dimen/base_smallicon_width" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_dialog_contentmargintop"
+        android:background="@color/baseItemBackgourndColor">
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:id="@+id/frmenu_csiv_mypic4"
+            android:layout_width="@dimen/base_smallicon_width"
+            android:layout_height="@dimen/base_smallicon_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/base_smallicon_marginleft"
+            app:materialIcon="help_circle"
+            app:materialIconColor="@color/baseIconColor"
+            app:materialIconSize="@dimen/base_smallicon_width" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/frmenu_csiv_mypic4"
+            android:text="关于我们"
+            android:textSize="@dimen/base_content_contenttextsize" />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:id="@+id/iv_mypic4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/baseIconColor"
+            app:materialIconSize="@dimen/base_smallicon_width" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_view_margintop"
+        android:background="@color/baseItemBackgourndColor">
+
+        <ImageView
+            android:id="@+id/frmenu_csiv_mypic3"
+            android:layout_width="@dimen/base_smallicon_width"
+            android:layout_height="@dimen/base_smallicon_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/base_smallicon_marginleft"
+            android:src="@drawable/feedback24_blue_light" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/frmenu_csiv_mypic3"
+            android:text="用户反馈"
+            android:textSize="@dimen/base_content_contenttextsize" />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:id="@+id/iv_mypic3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/baseIconColor"
+            app:materialIconSize="@dimen/base_smallicon_width" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_rl_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_dialog_contentmargintop"
+        android:background="@color/baseItemBackgourndColor">
+
+        <ImageView
+            android:id="@+id/frmenu_csiv_mypic7"
+            android:layout_width="@dimen/base_smallicon_width"
+            android:layout_height="@dimen/base_smallicon_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/base_smallicon_marginleft"
+            android:src="@drawable/clear24_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/frmenu_csiv_mypic7"
+            android:text="清除缓存"
+            android:textSize="@dimen/base_content_contenttextsize" />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:id="@+id/iv_mypic7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/baseIconColor"
+            app:materialIconSize="@dimen/base_smallicon_width" />
+
+    </RelativeLayout>
+
+</LinearLayout>

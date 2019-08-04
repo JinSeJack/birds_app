@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1E90FF</color>
+    <color name="colorPrimaryDark">#1E90FF</color>
+    <color name="colorAccent">#008B8B</color>
+
+    <color name="red">#900</color>
+    <color name="green">#090</color>
+    <color name="blue">#009</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+
+    <color name="ultra_dark">#29303F</color>
+    <color name="dark">#696E79</color>
+    <color name="ultra_dark_overlay">#0D29303F</color>
+
+
+    <color name="firstColor">#00BCD4</color>
+    <color name="secondColor">#E91E63</color>
+    <color name="thirdColor">#FF5722</color>
+    <color name="fourthColor">#4CAF50</color>
+
+    <!--按钮组-->
+    <color name="teal">#00796B</color>
+    <color name="brown">#8D6E63</color>
+    <color name="grey">#607D8B</color>
+    <color name="orange">#F57C00</color>
+    <!--按钮组-->
+
+    <!--基本色-->
+    <!--<color name="baseColor">#00acee</color>-->
+    <color name="baseColor">#1E90FF</color>
+    <!--<color name="baseColor">#9d1bb2</color>-->
+    <color name="menuColor">#9d1bb2</color>
+    <color name="baseAllBackgourndColor">#f1f5f7</color>
+    <color name="baseItemBackgourndColor">#ffffff</color>
+    <color name="baseIconColor">#00a8ff</color>
+    <color name="baseSelectedColor">#00acee</color>
+    <color name="baseTextColor">#ffffff</color>
+    <color name="baseEditTextColor">#616161</color>
+    <color name="baseProgressColor">#42bf37</color>
+
+    <color name="baseMusicItemBackground">#f1f5f8</color>
+    <color name="baseMusicItemIcon">#616264</color>
+    <color name="baseMusicItemHeaderBackground">#42bc43</color>
+    <color name="baseMusicIconColor">#00acee</color>
+    <!--基本色-->
+
+    <color name="transparent_background_button">#11000000</color>
+    <color name="transparent_background">#ffffff</color>
+
+
+</resources>

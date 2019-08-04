@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/aclvit_tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户名" />
+
+    <TextView
+        android:id="@+id/aclvit_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="时间" />
+
+    <TextView
+        android:id="@+id/aclvit_tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aclvit_tv_username"
+        android:text="内容" />
+
+    <TextView
+        android:id="@+id/aclvit_tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/aclvit_tv_content"
+        android:text="地点" />
+
+    <TextView
+        android:id="@+id/aclvit_tv_good"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aclvit_tv_content"
+        android:layout_centerHorizontal="true"
+        android:text="点赞数" />
+
+    <TextView
+        android:id="@+id/aclvit_tv_bad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/aclvit_tv_content"
+        android:text="点菜数" />
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="birds_names">
+        <item>新鲜事</item>
+        <item>birds2</item>
+        <item>birds3</item>
+        <item>birds4</item>
+        <item>birds1</item>
+    </string-array>
+
+</resources>
