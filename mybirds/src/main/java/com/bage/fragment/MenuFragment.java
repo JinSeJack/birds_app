@@ -13,6 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bage.activity.ImageCropActivity;
 import com.bage.activity.MenuActivity;
@@ -38,6 +39,7 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
     public static final int REQUEST_CODE_UPDATE_PIC = 0x1;
     public static final String TEMP_PHOTO_FILE_NAME = "temp_photo.jpg";
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mCurrentView = inflater.inflate(R.layout.fragment_menu, null);
@@ -53,7 +55,7 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
         csiv_mypic = (CustomShapeImageView) mCurrentView.findViewById(R.id.leftmenu_csiv_mypic);
 
         contents.add(new NewsFragment());
-        contents.add(new WhatIDoFragment());
+        //contents.add(new WhatIDoFragment());
         contents.add(new AboutMeFragment());
         contents.add(new SettingFragment());
         initMenus();
@@ -83,12 +85,16 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
         menu3.imgId = R.drawable.setting;
         menu3.content = "我的设置";
         Menu menu4 = new Menu();
-        menu4.imgId = R.drawable.fabu;
-        menu4.content = "退出";
+        menu4.imgId = R.drawable.sea;
+        menu4.content = "物种选择";
+        Menu menu5 = new Menu();
+        menu5.imgId = R.drawable.fabu;
+        menu5.content = "退出";
         menus.add(menu1);
         menus.add(menu2);
         menus.add(menu3);
         menus.add(menu4);
+        menus.add(menu5);
     }
 
 
@@ -144,15 +150,55 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
                 newContent = new SettingFragment();
                 break;
             case 3:
-                // currentTitle = "我的动态";
-                // newContent = new WhatIDoFragment();
-                myExit();
+                 currentTitle = "物种选择";
+                 choose();
+                 break;
+            default:myExit();
                 break;
         }
         if (newContent != null)
             switchFragment(newContent);
     }
 
+    private void choose() {
+        //借用一下whatIdoFragment,用于显示
+        WhatIDoFragment whatIDoFragment = new WhatIDoFragment();
+        whatIDoFragment.setSpeciesChooseListener(new WhatIDoFragment.SpeciesChooseListener(){
+            @Override
+            public void onSpeciesChoosed(String mode) {
+                MenuActivity.currentSpecies = mode;
+                LogUtils.shownToast(getContext(), "当前物种："+mode);
+                int icon = mode.equals("鸟") ? R.drawable.birdtitle : R.drawable.cicada;
+                String content = mode.equals("鸟") ? getString(R.string.dialog_bird_content) : getString(R.string.dialog_cicada_content);
+                showNormalDialog(mode, content, icon);
+            }
+
+        });
+        whatIDoFragment.show(getActivity().getFragmentManager(), "whatIDoFragment");
+    }
+
+
+    private void showNormalDialog(String title, String content, int icon){
+        //创建dialog构造器
+        AlertDialog.Builder normalDialog = new AlertDialog.Builder(getContext());
+        //设置title
+        normalDialog.setTitle(title);
+        //设置icon
+        normalDialog.setIcon(icon);//R.drawable.birdtitle);
+        //设置内容
+        normalDialog.setMessage(content);//getString(R.string.dialog_bird_content));
+        //设置按钮
+        normalDialog.setPositiveButton("确定"
+                , new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+                    }
+                });
+        //创建并显示
+        normalDialog.create().show();
+    }
     private void myExit() {
 
         AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).setTitle("您确定要退出么？")
