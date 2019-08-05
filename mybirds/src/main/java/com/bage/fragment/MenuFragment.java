@@ -169,6 +169,8 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
     }
 
     private void choose(String type) {
+        MenuActivity menua = (MenuActivity) getActivity();
+        menua.setAddVisable(View.VISIBLE);
         LogUtils.shownToast(getContext(), "当前物种："+type);
         MenuActivity.currentSpecies = type;
         int icon = type.equals("鸟") ? R.drawable.birdtitle : R.drawable.cicada;
