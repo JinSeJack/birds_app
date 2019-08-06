@@ -1,6 +1,7 @@
 package com.bage.fragment;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bage.activity.MenuActivity;
 import com.bage.activity.NewsDetailActivity;
 import com.bage.domain.Event;
 import com.bage.mybirds.R;
@@ -23,6 +25,7 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import org.apache.http.Header;
 
@@ -175,7 +178,9 @@ public class NewsPictureFragment extends NewsFragment implements AdapterView.OnI
             Event event = mListItems.get(position);
             String url = UrlUtils.getFilePreUrl(getActivity()) + event.getEve_pictureurl();
             LogUtils.sysoln("url:" + url);
-            ImageLoader.getInstance().displayImage(url, iv_image, MyImageLoaderUtils.getCarOption());
+            ImageLoader imageLoader = ImageLoader.getInstance();//使用前初始化配置
+            imageLoader.init(ImageLoaderConfiguration.createDefault(getActivity()));
+            imageLoader.displayImage(url, iv_image, MyImageLoaderUtils.getCarOption());
             tv_title.setText(event.getEve_question());
             String substring = "";
             if(event.getEve_time() != null){

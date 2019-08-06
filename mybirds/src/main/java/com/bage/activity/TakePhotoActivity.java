@@ -15,7 +15,10 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -30,9 +33,12 @@ import android.widget.Toast;
 import com.bage.common.Commons;
 import com.bage.domain.Event;
 import com.bage.mybirds.R;
+import com.bage.service.PhotoService;
+import com.bage.utils.FileProviderUtil;
 import com.bage.utils.JsonUtils;
 import com.bage.utils.TimeHelper;
 import com.bage.utils.UrlUtils;
+import com.bage.view.PhotoView;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -64,7 +70,7 @@ public class TakePhotoActivity extends AppCompatActivity {
                             Manifest.permission.ACCESS_FINE_LOCATION};
 
     //private OkHttpClient okHttpClient;
-    private String pictureUrl = UrlUtils.getControllerUrl(TakePhotoActivity.this, "api/event", "upload/picture");
+    private String pictureUrl = "";
     //private String pictureUrl = "http://192.168.56.1:8080/MyBirds/api/event/upload/picture";
     //定位相关
     private double longitude;
@@ -93,12 +99,20 @@ public class TakePhotoActivity extends AppCompatActivity {
     public BDLocationListener myListener = new MyLocationListener();
     public File myPhotoFile;
 
+    public static final int RC_CHOOSE_PHOTO = 10;
+    public static final int RC_TAKE_PHOTO = 11;
+    public static final int RC_CROP_PHOTO = 12;
+
+
+    private PhotoService mService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mService = new PhotoService(this);
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_take_photo);
+        setContentView(mService.mView.getView());
 
+        pictureUrl = UrlUtils.getControllerUrl(getApplicationContext(), "api/event", "upload/picture");
         verifyStoragePermissions(TakePhotoActivity.this);
         verifyLocationPermissions(TakePhotoActivity.this);
 
@@ -117,32 +131,40 @@ public class TakePhotoActivity extends AppCompatActivity {
         initLocation();//初始化百度定位信息
         mLocationClient.start();
         //调用本地图库的选择按钮
-        avatar = (ImageView)findViewById(R.id.avatar);
-        LinearLayout upload = (LinearLayout)findViewById(R.id.local_select_button);
-        upload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-                intent.setType(IMAGE_UNSPECIFIED);
-                Intent wrapperIntent = Intent.createChooser(intent, null);
-                startActivityForResult(wrapperIntent, PHOTO_ZOOM);
-            }
-        });
+//        avatar = (ImageView)findViewById(R.id.avatar);
+//        LinearLayout upload = (LinearLayout)findViewById(R.id.local_select_button);
+//        upload.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+//                intent.setType(IMAGE_UNSPECIFIED);
+//                Intent wrapperIntent = Intent.createChooser(intent, null);
+//                startActivityForResult(wrapperIntent, PHOTO_ZOOM);
+//            }
+//        });
         //拍照按钮
-        LinearLayout takePhoto = (LinearLayout)findViewById(R.id.take_photo_button);
-        takePhoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                imageDir = "temp.jpg";
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                try {
-                    intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(Environment.getExternalStorageDirectory(), imageDir)));
-                } catch (Exception e) {
-                    Toast.makeText(TakePhotoActivity.this, "SD卡初始化失败", Toast.LENGTH_SHORT).show();
-                }
-                startActivityForResult(intent, TAKE_PHOTO);
-            }
-        });
+//        LinearLayout takePhoto = (LinearLayout)findViewById(R.id.take_photo_button);
+//        takePhoto.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
+//        takePhoto.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                imageDir = "temp.jpg";
+//                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                try {
+//                    intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(Environment.getExternalStorageDirectory(), imageDir)));
+//                } catch (Exception e) {
+//                    Toast.makeText(TakePhotoActivity.this, "SD卡初始化失败", Toast.LENGTH_SHORT).show();
+//                }
+//                startActivityForResult(intent, TAKE_PHOTO);
+//            }
+//        });
+
         //上传图片
         LinearLayout uploadPhoto = (LinearLayout)findViewById(R.id.upload_photo_button);
         uploadPhoto.setOnClickListener(new View.OnClickListener() {
@@ -160,6 +182,102 @@ public class TakePhotoActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode,  Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode != RESULT_OK) {
+            Toast.makeText(this, "操作取消", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        switch (requestCode) {
+            case RC_CHOOSE_PHOTO:
+                if (null == data) {
+                    Toast.makeText(this, "没有拿到图片", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                Uri uri = data.getData();
+                String url=getPath(this, data.getData());
+                myPhotoFile = new File(url);
+                if (null == uri) {
+                    Toast.makeText(this, "没有拿到图片路径", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                // 剪裁图片
+                mService.cropPhoto(FileProviderUtil.getFilePathByUri(this, uri), 200);
+                break;
+            case RC_TAKE_PHOTO:
+                // 剪裁图片
+                mService.cropPhoto(mService.tempPhotoPath, 200);
+                break;
+            case RC_CROP_PHOTO:
+                // 显示图片
+                Bitmap bitmap = mService.showPhoto(mService.cropImgUri);
+
+                saveBitmapFile(bitmap, myPhotoFile);
+                break;
+        }
+    }
+
+    protected void onActivityResult1(int requestCode,int resultCode,Intent data){
+        if(resultCode == RESULT_OK){
+            if (null == data) {
+                Toast.makeText(this, "没有拿到图片", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            Uri uri = data.getData();
+            if (null == uri) {
+                Toast.makeText(this, "没有拿到图片路径", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if(requestCode == PHOTO_ZOOM){
+//                photoZoom(data.getData());
+                  mService.cropPhoto(FileProviderUtil.getFilePathByUri(this, uri), 200);
+            }
+
+            if(requestCode == TAKE_PHOTO){
+                File picture = new File(Environment.getExternalStorageDirectory()+"/"+imageDir);
+                photoZoom(Uri.fromFile(picture));
+            }
+            if(requestCode == PHOTO_RESULT){
+                Bundle extras = data.getExtras();
+                if(extras!=null){
+                    Bitmap photo = extras.getParcelable("data");
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    photo.compress(Bitmap.CompressFormat.JPEG,100,stream);
+                    saveBitmapFile(photo, myPhotoFile);
+                    avatar.setImageBitmap(photo);
+                }
+            }
+            if(requestCode == OPEN_GPS_RETURN){
+                Intent intent = new Intent(this,MainActivity.class);
+                startActivity(intent);
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        boolean allPass = true;
+        for (int i = 0; i < permissions.length; i++) {
+            if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
+                allPass = false;
+            }
+        }
+        if (!allPass) {
+            Toast.makeText(this, "没有获得相应权限", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        switch (requestCode) {
+            case RC_CHOOSE_PHOTO:
+                // 继续去打开图册
+                mService.choosePhoto();
+                break;
+            case RC_TAKE_PHOTO:
+                // 继续去拍照
+                mService.takePhoto();
+                break;
+        }
     }
     //初始化定位
     private void initLocation(){
@@ -420,35 +538,6 @@ public class TakePhotoActivity extends AppCompatActivity {
 
 
         return mediaFile;
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode,int resultCode,Intent data){
-        if(resultCode == RESULT_OK){
-            if(requestCode == PHOTO_ZOOM){
-                photoZoom(data.getData());
-            }
-            if(requestCode == TAKE_PHOTO){
-                File picture = new File(Environment.getExternalStorageDirectory()+"/"+imageDir);
-                photoZoom(Uri.fromFile(picture));
-            }
-            if(requestCode == PHOTO_RESULT){
-                Bundle extras = data.getExtras();
-                if(extras!=null){
-                    Bitmap photo = extras.getParcelable("data");
-                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                    photo.compress(Bitmap.CompressFormat.JPEG,100,stream);
-                    saveBitmapFile(photo, myPhotoFile);
-                    avatar.setImageBitmap(photo);
-                }
-            }
-            if(requestCode == OPEN_GPS_RETURN){
-                Intent intent = new Intent(this,MainActivity.class);
-                startActivity(intent);
-            }
-        }
-        super.onActivityResult(requestCode, resultCode, data);
     }
 
     public void saveBitmapFile(Bitmap bitmap, File file){
