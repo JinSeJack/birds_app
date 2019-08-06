@@ -153,11 +153,11 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
                 currentTitle = "我的设置";
                 newContent = new SettingFragment();
                 break;
-            case 3:
+            case 4:
                  currentTitle = "蝉";
                  choose("蝉");
                  break;
-            case 4:
+            case 3:
                 currentTitle = "鸟";
                 choose("鸟");
                 break;
