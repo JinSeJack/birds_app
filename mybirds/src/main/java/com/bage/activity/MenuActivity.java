@@ -35,6 +35,7 @@ import com.bage.fragment.MenuFragment;
 import com.bage.fragment.NewsFragment;
 import com.bage.mybirds.R;
 import com.bage.utils.CacheUtils;
+import com.bage.utils.FileProviderUtil;
 import com.bage.utils.FileUtils;
 import com.bage.utils.JsonUtils;
 import com.bage.utils.LogUtils;
@@ -531,10 +532,23 @@ public class MenuActivity extends CustomAnimation {
                 if (isRecording) {
                     if (myRecAudioFile != null) {
                                  /* 停止录音 */
-                        mMediaRecorder01.stop();
-                        mMediaRecorder01.release();
+//                        mMediaRecorder01.stop();
+//                        mMediaRecorder01.release();
+//
+//                        mMediaRecorder01 = null;
+                        if (mMediaRecorder01 != null) {
+                            try {
+                                mMediaRecorder01.stop();
+                            } catch (IllegalStateException e) {
+                                // TODO 如果当前java状态和jni里面的状态不一致，
+                                //e.printStackTrace();
+                                mMediaRecorder01 = null;
+                                mMediaRecorder01 = new MediaRecorder();
+                            }
+                            mMediaRecorder01.release();
+                            mMediaRecorder01 = null;
+                        }
 
-                        mMediaRecorder01 = null;
 
                         ivStartRecord.setImageResource(R.drawable.play);
                         isStopRecord = true;
@@ -561,8 +575,6 @@ public class MenuActivity extends CustomAnimation {
                         return;
                     }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
                     SimpleDateFormat format = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss");
                     Date date = new Date();
                     String audioName = format.format(date);
@@ -572,6 +584,19 @@ public class MenuActivity extends CustomAnimation {
 
                     mMediaRecorder01 = new MediaRecorder();
 
+                    PackageManager pm = getPackageManager();
+                    boolean permission_caremera = (PackageManager.PERMISSION_GRANTED ==
+                            pm.checkPermission("android.permission.RECORD_AUDIO", "com.bage.mybirds"));
+
+                    if (!(permission_caremera)) {
+                        LogUtils.shownToast(MenuActivity.this, "获得权限后，重试");
+                        ActivityCompat.requestPermissions(MenuActivity.this, new String[]{
+                                Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                Manifest.permission.RECORD_AUDIO,
+                        }, 0x01);
+
+                        return ;
+                    }
                     /* 设置录音来源为麦克风 */
                     mMediaRecorder01
                             .setAudioSource(MediaRecorder.AudioSource.MIC);
@@ -590,7 +615,7 @@ public class MenuActivity extends CustomAnimation {
 
 
                     isStopRecord = false;
-                } catch (IOException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -610,10 +635,18 @@ public class MenuActivity extends CustomAnimation {
                         eve = new String[]{et_count.getText().toString(), et_dec.getText().toString(), et_que.getText().toString()};
 
                         if(!isStopRecord){
-                            mMediaRecorder01.stop();
-                            mMediaRecorder01.release();
-
-                            mMediaRecorder01 = null;
+                            if (mMediaRecorder01 != null) {
+                                try {
+                                    mMediaRecorder01.stop();
+                                } catch (IllegalStateException e) {
+                                    // TODO 如果当前java状态和jni里面的状态不一致，
+                                    //e.printStackTrace();
+                                    mMediaRecorder01 = null;
+                                    mMediaRecorder01 = new MediaRecorder();
+                                }
+                                mMediaRecorder01.release();
+                                mMediaRecorder01 = null;
+                            }
 
                             ivStartRecord.setImageResource(R.drawable.play);
                             isStopRecord = true;
@@ -635,6 +668,25 @@ public class MenuActivity extends CustomAnimation {
 
     }
 
+    private void  checkPermission()
+    {
+        // 检查权限是否获取（android6.0及以上系统可能默认关闭权限，且没提示）
+        PackageManager pm = getPackageManager();
+        boolean permission_readStorage = (PackageManager.PERMISSION_GRANTED ==
+                pm.checkPermission("android.permission.READ_EXTERNAL_STORAGE", "com.bage.Activity"));
+        boolean permission_writeStorage = (PackageManager.PERMISSION_GRANTED ==
+                pm.checkPermission("android.permission.WRITE_EXTERNAL_STORAGE", "com.bage.Activity"));
+        boolean permission_caremera = (PackageManager.PERMISSION_GRANTED ==
+                pm.checkPermission("android.permission.RECORD_AUDIO", "com.bage.Activity"));
+
+        if (!(permission_readStorage && permission_writeStorage && permission_caremera)) {
+            ActivityCompat.requestPermissions(MenuActivity.this, new String[]{
+                    Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.RECORD_AUDIO,
+            }, 0x01);
+        }
+    }
+
     private void showFileChooser() {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("*/*");
@@ -653,7 +705,9 @@ public class MenuActivity extends CustomAnimation {
                 if (resultCode == RESULT_OK) {
                     // Get the Uri of the selected file
                     Uri uri = data.getData();
-                    String path = FileUtils.getPath(this, uri);
+                    String path = FileProviderUtil.getFilePathByUri(this, uri);
+//                    String path = FileUtils.getPath(this, uri); //The old api does not work now.
+//                    System.out.println(uri.toString()+"aaaa+++++++++++++"+path);
                     myRecAudioFile = new File(path);
                     uploadAudio("", eve);
                 }
